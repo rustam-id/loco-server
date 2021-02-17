@@ -1,0 +1,539 @@
+{
+    "TableAnalyticsCrew": [
+        {
+            "name": "grub",
+            "title": "Грубые нарушения",
+            "collection": "crews_data",
+            "collectionTotal": "nsi_crews",
+            "dateField": "VIOLS_ASUNBD.VIOL_DATE"
+        },
+        {
+            "name": "ne_grub",
+            "title": "Не грубые нарушения",
+            "collection": "crews_data",
+            "collectionTotal": "nsi_crews",
+            "dateField": "VIOLS_ASUNBD.VIOL_DATE"
+        }
+    ],
+    "TableMeryCrew": {
+        "table_name": {
+            "text": "Таблица меры",
+            "value": "mery"
+        },
+        "headers": [
+            {
+                "text": "Показатель",
+                "value": "name"
+            }
+        ],
+        "items": [],
+        "collection": "nsi_multes",
+        "collectionCell": "crews_data",
+        "DAN_TYPE": {
+            "DAN_TYPE": "events_tchmi"
+        },
+        "dateField": "VIOLS_TCHMI.VIOL_DATE"
+    },
+    "PredictCrewChart": [
+        {
+            "name": "predict",
+            "title": "Динамика прогнозирования риска",
+            "collection": "crews_predicts_aggr",
+            "collectionTotal": "crews_predicts_aggr",
+            "collectionPerson": "crews_predicts_dynmc",
+            "dateField": "DATE_WORK"
+        }
+    ],
+    "PredictCrewChartLevel": [
+        {
+            "name": "predict",
+            "title": "Распределение уровней риска",
+            "collection": "crews_predicts_aggr",
+            "collectionTotal": "crews_predicts_aggr",
+            "collectionPerson": "crews_predicts_dynmc",
+            "dateField": "DATE_WORK"
+        }
+    ],
+    "TableRatingCrew": [
+        {
+            "name": "grub",
+            "title": "Грубые нарушения (кол/чел)",
+            "collection": "crews_data",
+            "collectionTotal": "nsi_crews",
+            "ratingWeight": 3,
+            "dateField": "VIOLS_ASUNBD.VIOL_DATE"
+        },
+        {
+            "name": "ne_grub",
+            "title": "Не грубые нарушения (кол/чел)",
+            "collection": "crews_data",
+            "collectionTotal": "nsi_crews",
+            "ratingWeight": 2,
+            "dateField": "VIOLS_ASUNBD.VIOL_DATE"
+        },
+        {
+            "name": "knowledge",
+            "title": "Уровень знаний (ср. балл)",
+            "collection": "crews_data",
+            "collectionTotal": "crews_data",
+            "ratingWeight": 1,
+            "dateField": "ASPT.DATE_ASPT",
+            "reverseRating": true
+        },
+        {
+            "name": "discipline",
+            "title": "Нарушения трудовой дисциплины (факт/чел)",
+            "collection": "nsi_crews",
+            "collectionTotal": "nsi_crews",
+            "ratingWeight": 1
+        }
+    ],
+    "PersonHiddenFactChart": [
+        {
+            "name": "personHiddenFact",
+            "title": "Скрытые факторы",
+            "isChart": true,
+            "collection": "crews_data",
+            "collectionTotal": "crews_data"
+        }
+    ],
+    "personShortMery": [
+        {
+            "table_name": {
+                "text": "Краткосрочные меропрития",
+                "value": "short_mery"
+            },
+            "headers": [
+                {
+                    "text": "Мероприятие",
+                    "value": "EVENT"
+                },
+                {
+                    "text": "Приоритет",
+                    "value": "VES"
+                }
+            ],
+            "items": [],
+            "collection": "crews_data",
+            "totalField": "EVENTS",
+            "preField": "AUTO_EVENTS"
+        }
+    ],
+    "personLongMery": [
+        {
+            "table_name": {
+                "text": "Долгосрочные меропрития",
+                "value": "long_mery"
+            },
+            "headers": [
+                {
+                    "text": "Мероприятие",
+                    "value": "event"
+                },
+                {
+                    "text": "Приоритет",
+                    "value": "priority"
+                }
+            ],
+            "items": [],
+            "collection": "crews_data",
+            "totalField": "EVENTS_LONG",
+            "preField": "AUTO_EVENTS"
+        }
+    ],
+    "personViolsTable": [
+        {
+            "table_name": {
+                "text": "Данные по нарушениям",
+                "value": "voils_table"
+            },
+            "headers": [
+                {
+                    "text": "Дата нарушения",
+                    "value": "date"
+                },
+                {
+                    "text": "Категория",
+                    "value": "category"
+                },
+                {
+                    "text": "Нарушение",
+                    "value": "violation"
+                },
+                {
+                    "text": "Источник",
+                    "value": "source"
+                }
+            ],
+            "items": [],
+            "dateField": "VIOLS_ASUNBD.VIOL_DATE",
+            "collection": "crews_data",
+            "dictCollection": "nsi_multes",
+            "DAN_TYPE": {
+                "DAN_TYPE": "viols_asunbd_groups"
+            }
+        }
+    ],
+    "personViolsChartRisk": [
+        {
+            "name": "viols_chart_risk",
+            "title": "Прогнозируемые уровни риска машиниста",
+            "collection": "crews_predicts_dynmc",
+            "isChart": true,
+            "dateField": "DATE_WORK"
+        }
+    ],
+    "personViolsChartWeight": [
+        {
+            "name": "viols_chart_weight",
+            "title": "Нарушения совершаемые машинистом",
+            "collection": "crews_data",
+            "isChart": true,
+            "dateField": "VIOLS_ASUNBD.VIOL_DATE"
+        }
+    ],
+    "personInfoCards": [
+        {
+            "title": "Выработка часов",
+            "name": "info_card_hours",
+            "isComputed": true,
+            "isCard": true,
+            "param": false,
+            "value": "-",
+            "collection": "crews_trips",
+            "dateFieldPeriod": {
+                "startField": "WORK.START",
+                "endField": "WORK.END"
+            }
+        },
+        {
+            "title": "Использование ТЭР",
+            "name": "info_card_ter",
+            "isComputed": true,
+            "isCard": true,
+            "param": "-",
+            "value": "-",
+            "collection": "crews_trips",
+            "dateFieldPeriod": {
+                "startField": "WORK.START",
+                "endField": "WORK.END"
+            }
+        },
+        {
+            "hidden": true,
+            "title": "Техническая скорость",
+            "name": "info_card_speed",
+            "isComputed": false,
+            "isCard": true,
+            "param": "-",
+            "value": "-"
+        },
+        {
+            "title": "Уровень АСПТ",
+            "name": "info_card_aspt",
+            "isComputed": true,
+            "isCard": true,
+            "param": "-",
+            "value": "-",
+            "collection": "crews_data",
+            "dateField": "ASPT.DATE_ASPT"
+        },
+        {
+            "hidden": true,
+            "title": "СДО",
+            "name": "info_card_sdo",
+            "isComputed": false,
+            "isCard": true,
+            "param": "-",
+            "value": "-"
+        },
+        {
+            "hidden": true,
+            "title": "Группа риска",
+            "name": "info_card_risk",
+            "isComputed": false,
+            "isCard": true,
+            "param": "-",
+            "value": "-"
+        },
+        {
+            "hidden": true,
+            "title": "Дисциплина",
+            "name": "info_card_discipline",
+            "isComputed": false,
+            "isCard": true,
+            "param": "-",
+            "value": "-"
+        }
+    ],
+    "personPredictViols": [
+        {
+            "table_name": {
+                "text": "Рекомендуемые мероприятия по прогнозу",
+                "value": "predict_viols"
+            },
+            "headers": [
+                {
+                    "text": "Мероприятие",
+                    "value": "event"
+                },
+                {
+                    "text": "Приоритет",
+                    "value": "priority"
+                }
+            ],
+            "items": [],
+            "collection": "crews_predicts_stat",
+            "totalField": "RECOMMEND",
+            "preField": "RECOMMEND_EVENTS",
+            "dateField": "RECOMMEND_EVENTS.DATE_LAST_RECOMMEND"
+        }
+    ],
+    "personRecommendPredict": [
+        {
+            "table_name": {
+                "text": "Прогнозируемые нарушения",
+                "value": "recommend_predict"
+            },
+            "headers": [
+                {
+                    "text": "Код нарушения",
+                    "value": "event"
+                },
+                {
+                    "text": "Приоритет",
+                    "value": "priority"
+                }
+            ],
+            "items": [],
+            "collection": "crews_predicts_stat"
+        }
+    ],
+    "personAboutTable": [
+        {
+            "text": "Таб. номер",
+            "value": "TAB_NUM8"
+        },
+        {
+            "text": "Возраст",
+            "value": "BIRTH_DATE"
+        },
+        {
+            "text": "Стаж в депо",
+            "value": "EXP_DEPO"
+        },
+        {
+            "text": "Стаж в должности",
+            "value": "EXP_PROF"
+        },
+        {
+            "text": "Талон БДП",
+            "value": "CARD_BDP"
+        },
+        {
+            "text": "Талон ОТ",
+            "value": "CARD_OT"
+        }
+    ],
+    "personControlDates": [
+        {
+            "control": "Медкомиссия",
+            "date": "__.__.____",
+            "color": ""
+        },
+        {
+            "control": "ДКФС",
+            "date": "__.__.____",
+            "color": "",
+            "collection": "crews_data",
+            "table_name": "dkfs"
+        },
+        {
+            "control": "ПФО",
+            "date": "__.__.____",
+            "color": "",
+            "collection": "crews_data",
+            "table_name": "pfo"
+        },
+        {
+            "control": "Электробезопасность",
+            "date": "__.__.____",
+            "color": ""
+        },
+        {
+            "control": "Охрана труда",
+            "date": "__.__.____",
+            "color": ""
+        },
+        {
+            "control": "КИП",
+            "date": "__.__.____",
+            "color": ""
+        },
+        {
+            "control": "Собеседование ТЧЭ",
+            "date": "__.__.____",
+            "color": ""
+        }
+    ],
+    "TableDKFS": {
+        "table_name": {
+            "text": "Результаты динамического контроля функционального состояния (ДКФС)",
+            "value": "DKFS_table"
+        },
+        "headers": [
+            {
+                "text": "Основание ДКФС",
+                "value": "DKFS_name"
+            }
+        ],
+        "items": [
+            {
+                "DKFS_name": "Всего работников"
+            }
+        ],
+        "collection": "nsi_multes",
+        "collectionCell": "crews_data",
+        "DAN_TYPE": {
+            "DAN_TYPE": "psich_dkfs"
+        },
+        "dateField": "PSICH_DKFS.DATE"
+    },
+    "TableMonitoring": {
+        "table_name": {
+            "text": "Мониторинг поступления данных",
+            "value": "monitoring_data_crews_table"
+        },
+        "headers": [
+            {
+                "text": "Наименование типа данных",
+                "value": "NAME"
+            },
+            {
+                "text": "Тип данных",
+                "value": "DAN_TYPE"
+            },
+            {
+                "text": "Количество записей за последние сутки",
+                "value": "NUM_ROWS"
+            },
+            {
+                "text": "Дата последней записи",
+                "value": "CTIME"
+            },
+            {
+                "text": "Статус получения данных",
+                "value": "DAYS_EXPIRE"
+            }
+        ],
+        "items": [],
+        "collection": "stats_entries_datas"
+    },
+    "TabeTimeViols": {
+        "table_name": {
+            "text": "Анализ соответствия выявляемых нарушений бригад времени работы",
+            "value": "table_time_viols_crews"
+        },
+        "headers": [
+            {
+                "text": " - ",
+                "value": "viol_type"
+            }
+        ],
+        "items": [
+            {
+                "viol_type": {
+                    "title": "Всего нарушений АСУ НБД",
+                    "type": "totalItems",
+                    "SRC": "ASUNBD",
+                    "items": [
+                        {
+                            "viol_type": {
+                                "title": "- из них сопоставлено с маршрутом",
+                                "type": "fixViolsTrue"
+                            }
+                        },
+                        {
+                            "viol_type": {
+                                "title": "- из них не сопоставлено с маршрутом",
+                                "type": "fixViolsFalse"
+                            }
+                        },
+                        {
+                            "viol_type": {
+                                "title": "- % сопоставления",
+                                "type": "percentage"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "viol_type": {
+                    "title": "Всего нарушений КИП, ЦП, ЦПР",
+                    "type": "totalItems",
+                    "SRC": "TCHMI",
+                    "items": [
+                        {
+                            "viol_type": {
+                                "title": "- из них сопоставлено с маршрутом",
+                                "type": "fixViolsTrue"
+                            }
+                        },
+                        {
+                            "viol_type": {
+                                "title": "- из них не сопоставлено с маршрутом",
+                                "type": "fixViolsFalse"
+                            }
+                        },
+                        {
+                            "viol_type": {
+                                "title": "- % сопоставления",
+                                "type": "percentage"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "collection": "crews_1_reports",
+        "dateField": "DATE_VIOL"
+    },
+    "TabeTimeViolsDetails": 
+        {
+            "table_name": {
+                "text": "Детализация",
+                "value": "table_time_viols_crews_details"
+            },
+            "headers": [
+                {
+                    "text": "Дорога",
+                    "value": "road"
+                },
+                {
+                    "text": "Депо",
+                    "value": "depo"
+                },
+                {
+                    "text": "Таб.№",
+                    "value": "tab_num"
+                },
+                {
+                    "text": "Нарушение",
+                    "value": "viol"
+                },
+                {
+                    "text": "Дата/время",
+                    "value": "datetime"
+                }
+            ],
+            "items": [],
+            "collection": "crews_1_reports",
+            "collectionDict": {
+                "ASUNBD": "viols_asunbd",
+                "TCHMI": "viols_tchmi"
+            },
+            "dateField": "DATE_VIOL"
+        }
+    
+}

@@ -1,0 +1,56 @@
+{
+  "table_name": {
+    "text": "Результаты расчета",
+    "value": "lifecycle_trips_result"
+  },
+  "table_type": "output",
+  "isEditable": false,
+  "table_headers": [
+    {
+      "text": "Дата",
+      "value": "date"
+    },
+    {
+      "text": "Время начала поездки",
+      "value": "time"
+    },
+    {
+      "text": "Участок",
+      "value": "route"
+    },
+    {
+      "text": "Кратность тяги",
+      "value": "trCode"
+    },
+    {
+      "text": "Масса состава, т",
+      "value": "weight"
+    },
+    {
+      "text": "Пробег, км",
+      "value": "mileage"
+    },
+    {
+      "text": "Продолжи-тельность поездки, ч",
+      "value": "timeTrip"
+    },
+    {
+      "text": "Совершенный грузооборот, 1000 ткм",
+      "value": "goods"
+    },
+    {
+      "text": "Удельный расход ТЭР кВтч/10^4ткм или кг/10^4ткм",
+      "value": "unitEl"
+    },
+    {
+      "text": "Стоимость поездки, руб",
+      "value": "costTrip"
+    },
+    {
+      "text": "Удельная стоимость поездки, руб/10^3ткм",
+      "value": "unitCost"
+    }
+  ],
+  "table_items": [
+  ]
+}
